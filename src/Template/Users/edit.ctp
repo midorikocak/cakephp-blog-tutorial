@@ -19,7 +19,9 @@
         <?php
             echo $this->Form->input('username');
             echo $this->Form->input('password');
-            echo $this->Form->input('role');
+            echo $this->Form->input('role', [
+                'options' => ['admin' => 'Admin', 'author' => 'Author']
+                    ]);
         ?>
     </fieldset>
     <?= $this->Form->button(__('Submit')) ?>
